@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+.form label {
+    display: block;
+    margin-top: 12px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* 🔥 Error message */
+.error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    text-align: left;
+    min-height: 14px; /* prevents layout jump */
+}
+
+/* 🔴 Red border for error */
+input.error-border {
+    border: 2px solid red;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #4facfe;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #007bff;
+}
+
+/* Result */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ✅ Optional success style */
+.success {
+    color: green;
+}
