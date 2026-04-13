@@ -13,34 +13,34 @@ function calculateGrade() {
     document.getElementById("err4").innerText = "";
     document.getElementById("err5").innerText = "";
 
-    // Check one by one (EMPTY only)
+    // Check all subject validation
 
     if (m1 === "") {
-        document.getElementById("err1").innerText = "Enter Tamil marks";
+        document.getElementById("err1").innerText = "Enter Tamil mark";
         return;
     }
 
     if (m2 === "") {
-        document.getElementById("err2").innerText = "Enter English marks";
+        document.getElementById("err2").innerText = "Enter English mark";
         return;
     }
 
     if (m3 === "") {
-        document.getElementById("err3").innerText = "Enter Maths marks";
+        document.getElementById("err3").innerText = "Enter Maths mark";
         return;
     }
 
     if (m4 === "") {
-        document.getElementById("err4").innerText = "Enter Science marks";
+        document.getElementById("err4").innerText = "Enter Science mark";
         return;
     }
 
     if (m5 === "") {
-        document.getElementById("err5").innerText = "Enter Social marks";
+        document.getElementById("err5").innerText = "Enter Social Science mark";
         return;
     }
 
-    // Convert to number AFTER validation
+    // Convert to number 
     m1 = Number(m1);
     m2 = Number(m2);
     m3 = Number(m3);
@@ -50,7 +50,24 @@ function calculateGrade() {
     let total = m1 + m2 + m3 + m4 + m5;
     let avg = total / 5;
 
+    let grade;
+
+    // 🎯 Grade conditions
+    if (avg >= 90) {
+        grade = "A";
+    } else if (avg >= 75) {
+        grade = "B";
+    } else if (avg >= 60) {
+        grade = "C";
+    } else if (avg >= 40) {
+        grade = "D";
+    } else {
+        grade = "Fail";
+    }
+
+    // Show result
     document.getElementById("result").innerHTML =
         "Total: " + total + "<br>" +
-        "Average: " + avg.toFixed(2);
+        "Average: " + avg.toFixed(2) + "<br>" +
+        "Grade: " + grade;
 }
